@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Texas AI Automation</title>
+  <meta name="description" content="Get in touch for a free automation audit. Phone, email, or use our contact form.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+<div class="bg-mesh"></div>
+<div class="bg-grid"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="logo-icon">TX</div>Texas <span class="accent">AI</span></a>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="solutions.html">Solutions</a></li>
+      <li><a href="industries.html">Industries</a></li>
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li><a href="security.html">Security</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Free Audit →</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <div class="section-label">Get In Touch</div>
+    <h1>Let's talk about<br><span class="grad-text">your automation needs</span></h1>
+    <p>Free automation audits. Free initial pilot implementations. No commitment required — see results before you decide.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="contact-grid">
+      <!-- LEFT: Contact Info -->
+      <div class="fade-up">
+        <h3 style="font-family:var(--font-display); font-size:1.3rem; font-weight:700; margin-bottom:32px;">Reach us directly</h3>
+
+        <div class="contact-info-item">
+          <div class="ci-icon">📞</div>
+          <div>
+            <h4>Phone</h4>
+            <a href="tel:8322245918">832-224-5918</a>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="ci-icon">📧</div>
+          <div>
+            <h4>Email</h4>
+            <a href="mailto:admin@texaskrysal.com">admin@texaskrysal.com</a>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="ci-icon">📬</div>
+          <div>
+            <h4>Mailing Address</h4>
+            <p>PO Box 1093<br>Fulshear, TX 77441</p>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="ci-icon">🛡️</div>
+          <div>
+            <h4>Security &amp; Admin</h4>
+            <a href="admin.html">Admin Contact Page →</a>
+          </div>
+        </div>
+
+        <div style="margin-top:40px; padding:24px; background:var(--bg-card); border:1px solid var(--border-glass); border-radius:var(--radius-md); backdrop-filter:blur(8px);">
+          <h4 style="font-family:var(--font-display); font-weight:600; margin-bottom:10px; font-size:0.95rem;">What to expect</h4>
+          <div style="display:flex; flex-direction:column; gap:10px; font-size:0.85rem; color:var(--text-secondary);">
+            <span>→ We'll respond within 24 hours</span>
+            <span>→ Free automation audit of your current operations</span>
+            <span>→ Identify your highest-ROI automation opportunity</span>
+            <span>→ Free pilot implementation — no strings attached</span>
+            <span>→ You see results before any commitment</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Contact Form -->
+      <div class="fade-up">
+        <div class="contact-form">
+          <h3 style="font-family:var(--font-display); font-size:1.2rem; font-weight:700; margin-bottom:24px;">Send us a message</h3>
+          <!-- 
+            NOTE: To activate this form, sign up at https://web3forms.com 
+            and replace YOUR_ACCESS_KEY below with your actual key.
+            Web3Forms is free for up to unlimited submissions.
+          -->
+          <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+            <input type="hidden" name="subject" value="New inquiry from texaskrysal.com">
+            <input type="hidden" name="from_name" value="Texas AI Automation Website">
+            <input type="hidden" name="redirect" value="https://texaskrysal.com/contact.html">
+            <!-- Honeypot spam protection -->
+            <input type="checkbox" name="botcheck" style="display:none;">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required placeholder="Your name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required placeholder="you@company.com">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="(832) 555-0100">
+              </div>
+              <div class="form-group">
+                <label for="company">Company / Business</label>
+                <input type="text" id="company" name="company" placeholder="Your business name">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="industry">Industry</label>
+              <select id="industry" name="industry">
+                <option value="">Select your industry</option>
+                <option value="fuel-convenience">Fuel & Convenience Store</option>
+                <option value="restaurant">Restaurant / Quick Service</option>
+                <option value="retail">Retail</option>
+                <option value="bar-hospitality">Bar / Hospitality</option>
+                <option value="accounting">Accounting / Back Office</option>
+                <option value="food-truck">Food Truck / Mobile Vendor</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="interest">What are you most interested in?</label>
+              <select id="interest" name="interest">
+                <option value="">Select a solution</option>
+                <option value="conversation">Conversation Intelligence (audio monitoring & alerts)</option>
+                <option value="documents">Document & Invoice Automation</option>
+                <option value="inventory">Photo-to-Inventory Vision</option>
+                <option value="multiple">Multiple solutions</option>
+                <option value="free-audit">Free automation audit</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Tell us about your needs *</label>
+              <textarea id="message" name="message" required placeholder="Describe your business, current pain points, and what you'd like to automate..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+              Send Message →
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="nav-logo" style="margin-bottom:8px;"><div class="logo-icon">TX</div>Texas <span class="accent">AI</span></a><p>Privacy-first AI automation for businesses of all sizes.</p></div>
+      <div class="footer-col"><h4>Solutions</h4><ul><li><a href="solutions.html#conversation">Conversation Intelligence</a></li><li><a href="solutions.html#documents">Document Automation</a></li><li><a href="solutions.html#inventory">Inventory Vision</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="how-it-works.html">How It Works</a></li><li><a href="security.html">Security</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:8322245918">832-224-5918</a></li><li><a href="mailto:admin@texaskrysal.com">admin@texaskrysal.com</a></li><li style="color:var(--text-secondary); font-size:0.85rem;">PO Box 1093<br>Fulshear, TX 77441</li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 Texas AI Automation. All rights reserved.</span><div class="footer-legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="admin.html">Admin Contact</a></div></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How It Works — Texas AI Automation</title>
+  <meta name="description" content="See how our privacy-first AI pipeline captures, processes, classifies, alerts, and reports — all on local infrastructure.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+<div class="bg-mesh"></div>
+<div class="bg-grid"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="logo-icon">TX</div>Texas <span class="accent">AI</span></a>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="solutions.html">Solutions</a></li>
+      <li><a href="industries.html">Industries</a></li>
+      <li><a href="how-it-works.html" class="active">How It Works</a></li>
+      <li><a href="security.html">Security</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Free Audit →</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <div class="section-label">How It Works</div>
+    <h1>From raw data to<br><span class="grad-text">actionable intelligence</span></h1>
+    <p>Every automation follows the same five-stage pipeline — running entirely on your local infrastructure with a human-in-the-loop option for high-risk decisions.</p>
+  </div>
+</div>
+
+<!-- DETAILED PIPELINE -->
+<section>
+  <div class="container">
+    <!-- Stage 1 -->
+    <div class="grid-2 fade-up" style="align-items:center; gap:60px; margin-bottom:80px;">
+      <div>
+        <div style="display:flex; align-items:center; gap:16px; margin-bottom:20px;">
+          <div class="step-num">01</div>
+          <h2 style="font-family:var(--font-display); font-size:1.6rem; font-weight:700;">Capture</h2>
+        </div>
+        <p style="color:var(--text-secondary); margin-bottom:16px;">
+          Data enters the pipeline from your existing infrastructure — no new hardware required in most cases. Microphones at points of sale capture audio. Scanners or email inboxes receive documents. Staff phones snap inventory photos.
+        </p>
+        <p style="color:var(--text-secondary);">
+          All inputs are routed directly to your on-premises processing server. Nothing leaves your network at this stage or any other.
+        </p>
+      </div>
+      <div class="glass-card">
+        <h4 style="font-family:var(--font-display); font-weight:600; margin-bottom:16px;">Input Sources</h4>
+        <div style="display:flex; flex-wrap:wrap; gap:10px;">
+          <span style="padding:8px 16px; background:rgba(0,212,255,0.08); border:1px solid rgba(0,212,255,0.15); border-radius:50px; font-size:0.82rem; color:var(--text-secondary);">🎙️ Counter microphones</span>
+          <span style="padding:8px 16px; background:rgba(0,212,255,0.08); border:1px solid rgba(0,212,255,0.15); border-radius:50px; font-size:0.82rem; color:var(--text-secondary);">📞 Phone audio</span>
+          <span style="padding:8px 16px; background:rgba(0,212,255,0.08); border:1px solid rgba(0,212,255,0.15); border-radius:50px; font-size:0.82rem; color:var(--text-secondary);">📄 PDFs &amp; invoices</span>
+          <span style="padding:8px 16px; background:rgba(0,212,255,0.08); border:1px solid rgba(0,212,255,0.15); border-radius:50px; font-size:0.82rem; color:var(--text-secondary);">📧 Email attachments</span>
+          <span style="padding:8px 16px; background:rgba(0,212,255,0.08); border:1px solid rgba(0,212,255,0.15); border-radius:50px; font-size:0.82rem; color:var(--text-secondary);">📸 Phone camera photos</span>
+          <span style="padding:8px 16px; background:rgba(0,212,255,0.08); border:1px solid rgba(0,212,255,0.15); border-radius:50px; font-size:0.82rem; color:var(--text-secondary);">📊 Spreadsheets</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stage 2 -->
+    <div class="grid-2 fade-up" style="align-items:center; gap:60px; margin-bottom:80px;">
+      <div class="glass-card" style="order:1;">
+        <h4 style="font-family:var(--font-display); font-weight:600; margin-bottom:16px;">Processing Models</h4>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div style="padding:12px; background:rgba(139,92,246,0.06); border:1px solid rgba(139,92,246,0.12); border-radius:10px; font-size:0.85rem; color:var(--text-secondary);"><strong style="color:var(--accent-purple);">Whisper</strong> — speech-to-text transcription for audio inputs</div>
+          <div style="padding:12px; background:rgba(139,92,246,0.06); border:1px solid rgba(139,92,246,0.12); border-radius:10px; font-size:0.85rem; color:var(--text-secondary);"><strong style="color:var(--accent-purple);">OCR + IDP</strong> — optical character recognition for documents</div>
+          <div style="padding:12px; background:rgba(139,92,246,0.06); border:1px solid rgba(139,92,246,0.12); border-radius:10px; font-size:0.85rem; color:var(--text-secondary);"><strong style="color:var(--accent-purple);">YOLO variants</strong> — object detection for inventory photos</div>
+          <div style="padding:12px; background:rgba(139,92,246,0.06); border:1px solid rgba(139,92,246,0.12); border-radius:10px; font-size:0.85rem; color:var(--text-secondary);"><strong style="color:var(--accent-purple);">Custom fine-tuned models</strong> — trained on your specific products and jargon</div>
+        </div>
+      </div>
+      <div style="order:2;">
+        <div style="display:flex; align-items:center; gap:16px; margin-bottom:20px;">
+          <div class="step-num">02</div>
+          <h2 style="font-family:var(--font-display); font-size:1.6rem; font-weight:700;">Transcribe &amp; Extract</h2>
+        </div>
+        <p style="color:var(--text-secondary); margin-bottom:16px;">
+          Raw inputs are converted into structured text and data. Audio becomes transcripts with speaker labels. PDFs become extracted fields. Photos become item lists with counts and positions.
+        </p>
+        <p style="color:var(--text-secondary);">
+          All models run on your local GPU hardware — Mistral, LLaMA, Qwen, or Whisper depending on the task. Processing latency is typically under 300ms, far faster than cloud API round-trips.
+        </p>
+      </div>
+    </div>
+
+    <!-- Stage 3 -->
+    <div class="grid-2 fade-up" style="align-items:center; gap:60px; margin-bottom:80px;">
+      <div>
+        <div style="display:flex; align-items:center; gap:16px; margin-bottom:20px;">
+          <div class="step-num">03</div>
+          <h2 style="font-family:var(--font-display); font-size:1.6rem; font-weight:700;">Classify &amp; Detect</h2>
+        </div>
+        <p style="color:var(--text-secondary); margin-bottom:16px;">
+          Local LLMs analyze structured outputs to identify operational events, exceptions, and anomalies. This is where AI intelligence converts raw information into business-relevant signals.
+        </p>
+        <p style="color:var(--text-secondary);">
+          The classification engine can be fine-tuned to your business vocabulary, product catalog, and specific rules. A convenience store's "out of Marlboro Reds" triggers a different workflow than a restaurant's "the fryer is making noise."
+        </p>
+      </div>
+      <div class="glass-card">
+        <h4 style="font-family:var(--font-display); font-weight:600; margin-bottom:16px;">Event Categories</h4>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+          <div style="padding:10px 14px; background:rgba(0,212,255,0.06); border:1px solid rgba(0,212,255,0.1); border-radius:8px; font-size:0.82rem; color:var(--text-secondary);">Product requests</div>
+          <div style="padding:10px 14px; background:rgba(245,158,11,0.06); border:1px solid rgba(245,158,11,0.1); border-radius:8px; font-size:0.82rem; color:var(--text-secondary);">Complaints</div>
+          <div style="padding:10px 14px; background:rgba(244,63,94,0.06); border:1px solid rgba(244,63,94,0.1); border-radius:8px; font-size:0.82rem; color:var(--text-secondary);">Theft signals</div>
+          <div style="padding:10px 14px; background:rgba(16,185,129,0.06); border:1px solid rgba(16,185,129,0.1); border-radius:8px; font-size:0.82rem; color:var(--text-secondary);">Equipment issues</div>
+          <div style="padding:10px 14px; background:rgba(139,92,246,0.06); border:1px solid rgba(139,92,246,0.1); border-radius:8px; font-size:0.82rem; color:var(--text-secondary);">Escalation triggers</div>
+          <div style="padding:10px 14px; background:rgba(59,130,246,0.06); border:1px solid rgba(59,130,246,0.1); border-radius:8px; font-size:0.82rem; color:var(--text-secondary);">Invoice anomalies</div>
+          <div style="padding:10px 14px; background:rgba(244,63,94,0.06); border:1px solid rgba(244,63,94,0.1); border-radius:8px; font-size:0.82rem; color:var(--text-secondary);">Stock discrepancies</div>
+          <div style="padding:10px 14px; background:rgba(245,158,11,0.06); border:1px solid rgba(245,158,11,0.1); border-radius:8px; font-size:0.82rem; color:var(--text-secondary);">Safety incidents</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stage 4 -->
+    <div class="grid-2 fade-up" style="align-items:center; gap:60px; margin-bottom:80px;">
+      <div class="glass-card" style="order:1;">
+        <h4 style="font-family:var(--font-display); font-weight:600; margin-bottom:16px;">Alert Channels</h4>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <span style="font-size:1.2rem;">📱</span>
+            <span style="color:var(--text-secondary); font-size:0.9rem;"><strong style="color:var(--text-primary);">SMS</strong> — instant text to manager or owner</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px;">
+            <span style="font-size:1.2rem;">📧</span>
+            <span style="color:var(--text-secondary); font-size:0.9rem;"><strong style="color:var(--text-primary);">Email</strong> — detailed alert with context and transcript excerpt</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px;">
+            <span style="font-size:1.2rem;">🖥️</span>
+            <span style="color:var(--text-secondary); font-size:0.9rem;"><strong style="color:var(--text-primary);">Dashboard</strong> — real-time event feed with filters</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px;">
+            <span style="font-size:1.2rem;">📊</span>
+            <span style="color:var(--text-secondary); font-size:0.9rem;"><strong style="color:var(--text-primary);">Excel/Sheets</strong> — structured data appended automatically</span>
+          </div>
+        </div>
+      </div>
+      <div style="order:2;">
+        <div style="display:flex; align-items:center; gap:16px; margin-bottom:20px;">
+          <div class="step-num">04</div>
+          <h2 style="font-family:var(--font-display); font-size:1.6rem; font-weight:700;">Alert &amp; Trigger</h2>
+        </div>
+        <p style="color:var(--text-secondary); margin-bottom:16px;">
+          High-priority events trigger instant notifications. A customer asking for the manager? SMS goes out within seconds. A theft signal detected? Alert with context delivered immediately.
+        </p>
+        <p style="color:var(--text-secondary);">
+          Lower-priority events — product requests, equipment mentions, inventory gaps — are logged and queued for the nightly report. You define what's urgent and what's informational.
+        </p>
+      </div>
+    </div>
+
+    <!-- Stage 5 -->
+    <div class="grid-2 fade-up" style="align-items:center; gap:60px;">
+      <div>
+        <div style="display:flex; align-items:center; gap:16px; margin-bottom:20px;">
+          <div class="step-num">05</div>
+          <h2 style="font-family:var(--font-display); font-size:1.6rem; font-weight:700;">Nightly Report</h2>
+        </div>
+        <p style="color:var(--text-secondary); margin-bottom:16px;">
+          Every night, the system compiles a full operational summary — what customers asked for, what complaints were logged, what equipment issues were mentioned, what inventory needs reordering, and any security events.
+        </p>
+        <p style="color:var(--text-secondary);">
+          Reports are delivered via email, and structured data is exported to Excel or your preferred system. Over time, trend analysis reveals patterns that individual daily reports miss — seasonal demand shifts, recurring maintenance needs, and staffing optimization opportunities.
+        </p>
+      </div>
+      <div class="glass-card">
+        <h4 style="font-family:var(--font-display); font-weight:600; margin-bottom:16px;">Sample Report Sections</h4>
+        <div style="display:flex; flex-direction:column; gap:8px; font-family:var(--font-mono); font-size:0.78rem; color:var(--text-muted); background:rgba(4,8,18,0.6); padding:20px; border-radius:12px; border:1px solid var(--border-glass);">
+          <span style="color:var(--accent-cyan);">━━ Daily Operations Summary ━━</span>
+          <span>📊 Total customer interactions: 847</span>
+          <span>📋 Product requests logged: 23</span>
+          <span style="color:var(--accent-amber);">⚠️  Escalations triggered: 2</span>
+          <span>🔧 Equipment issues mentioned: 1</span>
+          <span>💰 Transaction anomalies flagged: 3</span>
+          <span style="color:var(--accent-cyan);">━━ Recommended Actions ━━</span>
+          <span>→ Reorder: Marlboro Gold, Monster Zero</span>
+          <span>→ Maintenance: Ice machine (mentioned 4x)</span>
+          <span>→ Review: Register 2 void pattern</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Human in the loop -->
+<section style="background:rgba(10,17,40,0.5);">
+  <div class="container">
+    <div style="max-width:700px; margin:0 auto; text-align:center;" class="fade-up">
+      <div class="section-label" style="justify-content:center;">Human-in-the-Loop</div>
+      <h2 class="section-title">AI recommends.<br>Humans decide.</h2>
+      <p style="color:var(--text-secondary); margin-bottom:32px;">
+        For high-risk events — potential theft, security incidents, or ambiguous situations — the system routes to a human review queue rather than taking autonomous action. You always have final say over consequential decisions. The AI handles the volume; you handle the judgment calls.
+      </p>
+      <a href="contact.html" class="btn btn-primary">See It In Action — Book a Demo</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-box fade-up">
+      <h2>Start with a <span class="grad-text">free pilot</span></h2>
+      <p>We'll automate one bottleneck at no cost. See how the pipeline works with your actual data — on your infrastructure.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-primary">Get Your Free Automation Audit</a>
+        <a href="tel:8322245918" class="btn btn-ghost">📞 832-224-5918</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="nav-logo" style="margin-bottom:8px;"><div class="logo-icon">TX</div>Texas <span class="accent">AI</span></a><p>Privacy-first AI automation for businesses of all sizes.</p></div>
+      <div class="footer-col"><h4>Solutions</h4><ul><li><a href="solutions.html#conversation">Conversation Intelligence</a></li><li><a href="solutions.html#documents">Document Automation</a></li><li><a href="solutions.html#inventory">Inventory Vision</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="how-it-works.html">How It Works</a></li><li><a href="security.html">Security</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:8322245918">832-224-5918</a></li><li><a href="mailto:admin@texaskrysal.com">admin@texaskrysal.com</a></li><li style="color:var(--text-secondary); font-size:0.85rem;">PO Box 1093<br>Fulshear, TX 77441</li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 Texas AI Automation. All rights reserved.</span><div class="footer-legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="admin.html">Admin Contact</a></div></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
