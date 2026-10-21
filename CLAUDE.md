@@ -2,14 +2,14 @@
 
 ## Project Overview
 
-This is the production website for **Texas AI Automation** (texaskrysal.com), an AI automation services company based in Fulshear, Texas. The company provides privacy-first AI solutions for businesses of all sizes — from food trucks to multi-site enterprises — focusing on three core pillars: conversation intelligence (audio monitoring & analysis), document/invoice automation, and photo-based inventory counting. All AI processing runs on local infrastructure using open-weight models (Mistral, LLaMA, Qwen, Whisper, YOLO). No client data ever touches public cloud LLMs.
+This is the production website for **Texas AI Automation** (texaskrystal.com), an AI automation services company based in Fulshear, Texas. The company provides privacy-first AI solutions for businesses of all sizes — from food trucks to multi-site enterprises — focusing on three core pillars: conversation intelligence (audio monitoring & analysis), document/invoice automation, and photo-based inventory counting. All AI processing runs on local infrastructure using open-weight models (Mistral, LLaMA, Qwen, Whisper, YOLO). No client data ever touches public cloud LLMs.
 
 ## Business Details
 
 - **Company Name:** Texas AI Automation
-- **Domain:** texaskrysal.com
+- **Domain:** texaskrystal.com
 - **Phone:** 832-224-5918
-- **Email:** admin@texaskrysal.com
+- **Email:** admin@texaskrystal.com
 - **Mailing Address:** 8055 FM359, PO Box 1093 Fulshear, TX 77441 
 - **Owner:** Krish
 
@@ -79,7 +79,7 @@ All theme values are in `:root` at the top of `style.css`. Change these to rethe
 1. Create a free Cloudflare account
 2. Go to Workers & Pages → Create → Upload assets
 3. Drag and drop the entire project folder
-4. Add custom domain `texaskrysal.com` in project settings
+4. Add custom domain `texaskrystal.com` in project settings
 5. Update domain nameservers to Cloudflare's (or add CNAME at registrar)
 6. SSL activates automatically
 
@@ -88,7 +88,7 @@ All theme values are in `:root` at the top of `style.css`. Change these to rethe
 1. Create a GitHub repository
 2. Push all files (HTML at root, css/ and js/ folders)
 3. Go to Settings → Pages → Source: main branch, root folder
-4. Add custom domain `texaskrysal.com` in Pages settings
+4. Add custom domain `texaskrystal.com` in Pages settings
 5. Update DNS: CNAME record pointing to `<username>.github.io`
 
 ### Alternative: Vercel or Netlify
@@ -129,7 +129,7 @@ This site was built partly to satisfy Google's developer verification requiremen
 - **Privacy Policy linked from homepage footer** — required for OAuth verification
 - **Contact info is real and verifiable** — phone, email, mailing address
 - **Domain must be verified** via Google Search Console
-- **Email must be on the domain** (admin@texaskrysal.com) for organizational verification
+- **Email must be on the domain** (admin@texaskrystal.com) for organizational verification
 
 ## Content Guidelines
 
