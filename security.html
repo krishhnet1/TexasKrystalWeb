@@ -3,28 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Security &amp; Privacy — Texas AI Automation</title>
-  <meta name="description" content="Our security posture: local LLM deployment, encryption, access controls, compliance frameworks, and data minimization principles.">
+  <title>Security &amp; Privacy — Texas Krystal</title>
+  <meta name="description" content="How we approach data processing, access, retention, and security controls for our AI automation services.">
   <link rel="canonical" href="https://texaskrystal.com/security.html">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://texaskrystal.com/security.html">
-  <meta property="og:title" content="Security &amp; Privacy — Texas AI Automation">
-  <meta property="og:description" content="Our security posture: local LLM deployment, encryption, access controls, compliance frameworks, and data minimization principles.">
+  <meta property="og:title" content="Security &amp; Privacy — Texas Krystal">
+  <meta property="og:description" content="How we approach data processing, access, retention, and security controls for our AI automation services.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Sora:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="css/style.css">
-  <noscript><style>.fade-up{opacity:1;transform:none}</style></noscript>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23A63A24' d='M12 1.5l3.1 7.1 7.7.7-5.8 5.1 1.7 7.6L12 18l-6.7 4 1.7-7.6L1.2 9.3l7.7-.7z'/></svg>">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="bg-mesh"></div>
-<div class="bg-grid"></div>
 
 <nav class="nav" aria-label="Primary">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo"><div class="logo-icon">TX</div>Texas <span class="accent">AI</span></a>
+    <a href="index.html" class="nav-logo"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5l3.1 7.1 7.7.7-5.8 5.1 1.7 7.6L12 18l-6.7 4 1.7-7.6L1.2 9.3l7.7-.7z" fill="#A63A24"></path></svg>Texas Krystal</a>
     <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="primary-nav">
       <li><a href="index.html">Home</a></li>
@@ -34,7 +31,7 @@
       <li><a href="security.html" class="active">Security</a></li>
       <li><a href="government.html">Government</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="contact.html" class="nav-cta">Free Audit →</a></li>
+      <li><a href="contact.html" class="nav-cta">Free Business Audit →</a></li>
     </ul>
   </div>
 </nav>
@@ -42,58 +39,52 @@
 
 <div class="page-header">
   <div class="container">
-    <div class="section-label">Security &amp; Privacy</div>
-    <h1>Your data stays yours.<br><span class="grad-text">No exceptions.</span></h1>
-    <p>We deploy AI on your infrastructure. Zero data routes to public clouds. Zero data trains external models. Here's exactly how we protect your business.</p>
+    <h1>Your data stays yours.</h1>
+    <p>We agree where information is processed, who can access it, and which external services receive it before deployment. Client data is not used to train external AI models.</p>
   </div>
 </div>
 
 <!-- LOCAL LLM -->
 <section>
   <div class="container">
-    <div class="grid-2 fade-up" style="align-items:center; gap:60px; margin-bottom:80px;">
+    <div class="grid-2" style="align-items:center; gap:60px; margin-bottom:80px;">
       <div>
-        <div class="section-label">Core Architecture</div>
-        <h2 class="section-title">Local LLM Deployment</h2>
+        <h2 class="section-title">Where AI Runs</h2>
         <p style="color:var(--text-secondary); margin-bottom:16px;">
-          We deploy open-weight models — Mistral, LLaMA, Qwen, and others — entirely within isolated, local server environments on your premises or on dedicated edge hardware that you control.
+          Local processing is available where supported and configured, including on your premises or on edge hardware you control.
         </p>
         <p style="color:var(--text-secondary); margin-bottom:16px;">
-          Your PDFs, Excel data, transcribed audio, and inventory images never leave your internal network perimeter. No data is routed to external cloud providers, API endpoints, or third-party model vendors.
+          We agree where information is processed, who can access it, and which external services receive it before deployment.
         </p>
         <p style="color:var(--text-secondary);">
-          This architecture eliminates the risks associated with public LLM services: unconsented data usage for model training, data leaks, and regulatory violations.
+          We help configure access, retention and data-sharing controls to support your requirements.
         </p>
       </div>
       <div class="glass-card">
         <h3 style="font-size:1rem;font-family:var(--font-display); font-weight:600; margin-bottom:20px;">Operational Advantages</h3>
         <div style="display:flex; flex-direction:column; gap:14px;">
           <div style="display:flex; gap:12px; align-items:flex-start;">
-            <span style="color:var(--accent-cyan); font-size:1.1rem;">⚡</span>
             <div>
-              <strong style="color:var(--text-primary); font-size:0.9rem;">Ultra-Low Latency</strong>
-              <p style="color:var(--text-secondary); font-size:0.82rem; margin-top:4px;">100–300ms local vs. 500–1000ms cloud round-trips. Critical for real-time conversation monitoring.</p>
+              <strong style="color:var(--text-primary); font-size:0.9rem;">Local Response</strong>
+              <p style="color:var(--text-secondary); font-size:0.82rem; margin-top:4px;">Local processing, where configured, can reduce dependence on outside services.</p>
             </div>
           </div>
           <div style="display:flex; gap:12px; align-items:flex-start;">
-            <span style="color:var(--accent-emerald); font-size:1.1rem;">💰</span>
             <div>
               <strong style="color:var(--text-primary); font-size:0.9rem;">Predictable Costs</strong>
-              <p style="color:var(--text-secondary); font-size:0.82rem; margin-top:4px;">Fixed infrastructure cost vs. unpredictable pay-per-token cloud pricing that scales with volume.</p>
+              <p style="color:var(--text-secondary); font-size:0.82rem; margin-top:4px;">Local deployments can use fixed infrastructure costs instead of per-token pricing.</p>
             </div>
           </div>
           <div style="display:flex; gap:12px; align-items:flex-start;">
-            <span style="color:var(--accent-purple); font-size:1.1rem;">🔌</span>
             <div>
-              <strong style="color:var(--text-primary); font-size:0.9rem;">Offline Resilience</strong>
-              <p style="color:var(--text-secondary); font-size:0.82rem; margin-top:4px;">Automations continue running during internet outages, API downtimes, or vendor disruptions.</p>
+              <strong style="color:var(--text-primary); font-size:0.9rem;">Outage Planning</strong>
+              <p style="color:var(--text-secondary); font-size:0.82rem; margin-top:4px;">Locally configured automations may keep running during an internet or vendor outage.</p>
             </div>
           </div>
           <div style="display:flex; gap:12px; align-items:flex-start;">
-            <span style="color:var(--accent-amber); font-size:1.1rem;">🎯</span>
             <div>
-              <strong style="color:var(--text-primary); font-size:0.9rem;">Custom Fine-Tuning</strong>
-              <p style="color:var(--text-secondary); font-size:0.82rem; margin-top:4px;">Models trained on your specific jargon, product catalogs, and operational parameters using RAG.</p>
+              <strong style="color:var(--text-primary); font-size:0.9rem;">Your Business Information</strong>
+              <p style="color:var(--text-secondary); font-size:0.82rem; margin-top:4px;">Connect the system to your approved business information, where supported.</p>
             </div>
           </div>
         </div>
@@ -101,48 +92,41 @@
     </div>
 
     <!-- SECURITY CONTROLS -->
-    <div class="section-label fade-up">Security Controls</div>
-    <h2 class="section-title fade-up">Enterprise-grade protection</h2>
-    <p class="section-desc fade-up">Our security posture follows SOC 2 principles even as we work toward formal certification.</p>
+    <h2 class="section-title">Security controls</h2>
+    <p class="section-desc">We help configure access, retention and data-sharing controls to support your requirements.</p>
 
-    <div class="security-grid stagger" style="margin-bottom:60px;">
-      <div class="security-item fade-up">
-        <div class="sec-icon">🔐</div>
+    <div class="security-grid" style="margin-bottom:60px;">
+      <div class="security-item">
         <div>
           <h3>Encryption at Rest &amp; In Transit</h3>
-          <p>AES-256 encryption for stored data. TLS 1.3 for all internal communications between system components.</p>
+          <p>Encryption for stored data and communications, configured for your deployment.</p>
         </div>
       </div>
-      <div class="security-item fade-up">
-        <div class="sec-icon">👤</div>
+      <div class="security-item">
         <div>
           <h3>Role-Based Access Control</h3>
-          <p>Granular permissions. Owners, managers, and staff see only what their role requires. All access is logged.</p>
+          <p>Permissions are configured so owners, managers, and staff see what their role requires.</p>
         </div>
       </div>
-      <div class="security-item fade-up">
-        <div class="sec-icon">📝</div>
+      <div class="security-item">
         <div>
-          <h3>Full Audit Logging</h3>
-          <p>Every data access, model query, and configuration change is logged with timestamps and user identity.</p>
+          <h3>Audit Logging</h3>
+          <p>Access and configuration activity can be logged, where supported and configured.</p>
         </div>
       </div>
-      <div class="security-item fade-up">
-        <div class="sec-icon">⏱️</div>
+      <div class="security-item">
         <div>
           <h3>Configurable Retention</h3>
-          <p>You define how long data is stored. Automatic purge schedules ensure nothing persists beyond your window.</p>
+          <p>We set how long data is stored during configuration, with purge schedules where supported.</p>
         </div>
       </div>
-      <div class="security-item fade-up">
-        <div class="sec-icon">🚫</div>
+      <div class="security-item">
         <div>
           <h3>No External Model Training</h3>
           <p>Your data is used exclusively to produce your results. It is never contributed to external AI model training.</p>
         </div>
       </div>
-      <div class="security-item fade-up">
-        <div class="sec-icon">🔄</div>
+      <div class="security-item">
         <div>
           <h3>Incident Response Plan</h3>
           <p>Documented procedures for breach detection, containment, notification, and recovery with defined timelines.</p>
@@ -151,53 +135,48 @@
     </div>
 
     <!-- COMPLIANCE -->
-    <div class="section-label fade-up">Compliance Alignment</div>
-    <h2 class="section-title fade-up">Grounded in recognized frameworks</h2>
-    <p class="section-desc fade-up">We align our practices with established security and privacy standards.</p>
+    <h2 class="section-title">Grounded in recognized frameworks</h2>
+    <p class="section-desc">These frameworks guide our practices. They are not certifications, and we do not promise compliance.</p>
 
-    <div class="grid-3 stagger">
-      <div class="glass-card fade-up">
-        <div class="card-icon blue">📋</div>
+    <div class="grid-3">
+      <div class="glass-card">
         <h3 class="card-title">NIST AI Risk Management</h3>
-        <p class="card-desc">Our AI deployment practices follow the NIST AI Risk Management Framework for trustworthy, accountable AI systems.</p>
+        <p class="card-desc">A reference for managing AI risk and keeping people accountable for decisions.</p>
       </div>
-      <div class="glass-card fade-up">
-        <div class="card-icon purple">🛡️</div>
+      <div class="glass-card">
         <h3 class="card-title">NIST Privacy Framework</h3>
-        <p class="card-desc">Data minimization and disassociated processing — process locally where possible, limit observability and linkability.</p>
+        <p class="card-desc">A reference for data minimization and limiting who can see or link information.</p>
       </div>
-      <div class="glass-card fade-up">
-        <div class="card-icon emerald">🌐</div>
+      <div class="glass-card">
         <h3 class="card-title">GDPR &amp; CCPA/CPRA</h3>
-        <p class="card-desc">Collection, use, and retention are limited to what is reasonably necessary and proportionate to the purpose.</p>
+        <p class="card-desc">A reference for limiting collection, use, and retention to what the purpose needs.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- AUDIO MONITORING TRANSPARENCY -->
-<section style="background:rgba(10,17,40,0.5);">
+<section style="background:#F4F6F8;">
   <div class="container">
-    <div style="max-width:800px;" class="fade-up">
-      <div class="section-label">Audio Monitoring Compliance</div>
-      <h2 class="section-title">Transparent audio capture</h2>
+    <div style="max-width:800px;">
+      <h2 class="section-title">Conversation analysis</h2>
       <p style="color:var(--text-secondary); margin-bottom:24px;">
-        Because our conversation intelligence product processes audio from business environments, we take consent, notice, and compliance extremely seriously.
+        Conversation analysis involves recording people at work and in stores, so notice, consent, access and retention are set before deployment.
       </p>
       <div class="glass-card" style="margin-bottom:24px;">
-        <h3 style="font-size:1rem;font-family:var(--font-display); font-weight:600; margin-bottom:16px;">Our Commitments</h3>
+        <h3 style="font-size:1rem;font-family:var(--font-display); font-weight:600; margin-bottom:16px;">What We Set Up With You</h3>
         <div style="display:flex; flex-direction:column; gap:14px;">
           <div style="display:flex; gap:12px; align-items:flex-start;">
             <span style="color:var(--accent-cyan);">✓</span>
-            <span style="color:var(--text-secondary); font-size:0.9rem;"><strong style="color:var(--text-primary);">Clear disclosure</strong> of where audio is captured — counter, phone, drive-thru — and visible signage at all monitored locations</span>
+            <span style="color:var(--text-secondary); font-size:0.9rem;"><strong style="color:var(--text-primary);">Recording notice</strong> where audio is captured, such as a counter, phone line, or drive-thru</span>
           </div>
           <div style="display:flex; gap:12px; align-items:flex-start;">
             <span style="color:var(--accent-cyan);">✓</span>
-            <span style="color:var(--text-secondary); font-size:0.9rem;"><strong style="color:var(--text-primary);">Employee consent</strong> through onboarding acknowledgements and clear policies explaining monitoring scope and purpose</span>
+            <span style="color:var(--text-secondary); font-size:0.9rem;"><strong style="color:var(--text-primary);">Appropriate consent</strong> from the people recorded, including employee acknowledgements and clear policies</span>
           </div>
           <div style="display:flex; gap:12px; align-items:flex-start;">
             <span style="color:var(--accent-cyan);">✓</span>
-            <span style="color:var(--text-secondary); font-size:0.9rem;"><strong style="color:var(--text-primary);">Minimal retention</strong> — you choose whether to retain raw audio, transcripts only, or events only</span>
+            <span style="color:var(--text-secondary); font-size:0.9rem;"><strong style="color:var(--text-primary);">Access restrictions and retention</strong> — who can see recordings and transcripts, how long they are kept, and whether raw audio is kept at all</span>
           </div>
           <div style="display:flex; gap:12px; align-items:flex-start;">
             <span style="color:var(--accent-cyan);">✓</span>
@@ -205,12 +184,12 @@
           </div>
           <div style="display:flex; gap:12px; align-items:flex-start;">
             <span style="color:var(--accent-cyan);">✓</span>
-            <span style="color:var(--text-secondary); font-size:0.9rem;"><strong style="color:var(--text-primary);">Compliance guidance</strong> — we provide signage templates, employee acknowledgement forms, and consent workflow recommendations</span>
+            <span style="color:var(--text-secondary); font-size:0.9rem;"><strong style="color:var(--text-primary);">Human review</strong> — alerts flag potential issues for people to review. This is not an emergency detection service, it does not decide that theft occurred, and SMS delivery is not guaranteed</span>
           </div>
         </div>
       </div>
       <p style="color:var(--text-muted); font-size:0.85rem;">
-        Texas is a one-party consent state for audio recording. Our deployment guidance addresses both state and federal requirements, including reasonable expectation of privacy considerations. We recommend consulting with legal counsel for your specific jurisdiction and use case.
+        Recording and consent rules vary by location and situation, and they may apply differently to conversations you are not part of. Please consult legal counsel for your specific use.
       </p>
     </div>
   </div>
@@ -219,10 +198,10 @@
 <!-- DATA PROMISE -->
 <section>
   <div class="container">
-    <div style="max-width:700px; margin:0 auto; text-align:center;" class="fade-up">
-      <h2 class="section-title">Our Data Promise</h2>
+    <div style="max-width:700px; margin:0 auto; text-align:center;">
+      <h2 class="section-title">Our Approach to Data</h2>
       <p style="color:var(--text-secondary); font-size:1.05rem; line-height:1.8; margin-bottom:32px;">
-        We only retain what's needed to produce your alerts and reports. You choose retention windows. You can run models locally when policy requires it. We collect only what we need, keep it safe, and dispose of it securely.
+        We agree where information is processed, who can access it, and which external services receive it before deployment. We help configure access, retention and data-sharing controls to support your requirements.
       </p>
       <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
         <a href="privacy.html" class="btn btn-ghost">Read Privacy Policy</a>
@@ -234,12 +213,12 @@
 
 <section class="cta-section">
   <div class="container">
-    <div class="cta-box fade-up">
-      <h2>Questions about <span class="grad-text">security?</span></h2>
-      <p>We're happy to walk through our architecture, controls, and compliance posture in detail.</p>
+    <div class="cta-box">
+      <h2>Questions about security?</h2>
+      <p>We're happy to walk through how a deployment would be set up and which controls apply.</p>
       <div class="cta-actions">
         <a href="contact.html" class="btn btn-primary">Schedule a Security Review</a>
-        <a href="mailto:admin@texaskrystal.com" class="btn btn-ghost">📧 admin@texaskrystal.com</a>
+        <a href="mailto:admin@texaskrystal.com" class="btn btn-ghost">admin@texaskrystal.com</a>
       </div>
     </div>
   </div>
@@ -250,12 +229,12 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand"><a href="index.html" class="nav-logo" style="margin-bottom:8px;"><div class="logo-icon">TX</div>Texas <span class="accent">AI</span></a><p>Privacy-first AI automation for businesses of all sizes.</p></div>
+      <div class="footer-brand"><a href="index.html" class="nav-logo"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5l3.1 7.1 7.7.7-5.8 5.1 1.7 7.6L12 18l-6.7 4 1.7-7.6L1.2 9.3l7.7-.7z" fill="#A63A24"></path></svg>Texas Krystal</a><p>AI automation for fuel, retail and restaurant operators. IT services for Texas agencies.</p></div>
       <div class="footer-col"><h2>Solutions</h2><ul><li><a href="solutions.html#conversation">Conversation Intelligence</a></li><li><a href="solutions.html#documents">Document Automation</a></li><li><a href="solutions.html#inventory">Inventory Vision</a></li></ul></div>
-      <div class="footer-col"><h2>Company</h2><ul><li><a href="how-it-works.html">How It Works</a></li><li><a href="security.html">Security</a></li><li><a href="government.html">Government</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h2>Company</h2><ul><li><a href="how-it-works.html">How It Works</a></li><li><a href="security.html">Security</a></li><li><a href="government.html">Government</a></li><li><a href="industries.html">Industries</a></li><li><a href="contact.html">Contact</a></li></ul></div>
       <div class="footer-col"><h2>Contact</h2><ul><li><a href="tel:8322245918">832-224-5918</a></li><li><a href="mailto:admin@texaskrystal.com">admin@texaskrystal.com</a></li><li style="color:var(--text-secondary); font-size:0.85rem;">8055 FM359,<br>PO Box 1093<br>Fulshear, TX 77441</li></ul></div>
     </div>
-    <div class="footer-bottom"><span>&copy; 2026 Texas AI Automation. All rights reserved.</span><div class="footer-legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="admin.html">Admin Contact</a></div></div>
+    <div class="footer-bottom"><span>&copy; 2026 Katy Krystal Group, Inc, dba Texas Krystal. All rights reserved.</span><div class="footer-legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="admin.html">Admin Contact</a></div></div>
   </div>
 </footer>
 <script src="js/main.js"></script>

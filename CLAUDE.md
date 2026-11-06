@@ -1,12 +1,13 @@
-# CLAUDE.md — Texas AI Automation Website
+# CLAUDE.md — Texas Krystal Website
 
 ## Project Overview
 
-This is the production website for **Texas AI Automation** (texaskrystal.com), an AI automation services company based in Fulshear, Texas. The company provides privacy-first AI solutions for businesses of all sizes — from food trucks to multi-site enterprises — focusing on three core pillars: conversation intelligence (audio monitoring & analysis), document/invoice automation, and photo-based inventory counting. All AI processing runs on local infrastructure using open-weight models (Mistral, LLaMA, Qwen, Whisper, YOLO). No client data ever touches public cloud LLMs.
+This is the production website for **Texas Krystal** (texaskrystal.com), a brand of Katy Krystal Group, Inc. It is an AI automation and IT services company based in Fulshear, Texas. The company provides privacy-first AI solutions for businesses of all sizes — from food trucks to multi-site enterprises — focusing on three core pillars: conversation intelligence (audio monitoring & analysis), document/invoice automation, and photo-based inventory counting. Where information is processed is agreed with each client before deployment. Local processing is described only where supported and configured.
 
 ## Business Details
 
-- **Company Name:** Texas AI Automation
+- **Lead brand:** Texas Krystal
+- **Legal entity:** Katy Krystal Group, Inc, dba Texas Krystal (footer and legal pages)
 - **Domain:** texaskrystal.com
 - **Phone:** 832-224-5918
 - **Email:** admin@texaskrystal.com
@@ -16,8 +17,8 @@ This is the production website for **Texas AI Automation** (texaskrystal.com), a
 ## Tech Stack
 
 - **Pure static site** — HTML, CSS, JavaScript only. No frameworks, no build step, no Node.js.
-- **CSS:** Single stylesheet at `css/style.css`. Uses CSS custom properties (variables) for theming. Fonts loaded from Google Fonts (Sora, Outfit, JetBrains Mono).
-- **JS:** Single script at `js/main.js`. Handles nav scroll effect, mobile menu toggle, scroll-reveal animations (IntersectionObserver), and contact form submission.
+- **CSS:** Single stylesheet at `css/style.css`. Uses CSS custom properties (variables) for theming. Fonts loaded from Google Fonts (Zilla Slab, Source Sans 3).
+- **JS:** Single script at `js/main.js`. Handles the mobile menu, active nav link, and contact form submission.
 - **Contact form:** Uses [Web3Forms](https://web3forms.com) API. The real access key is in `contact.html`. It is meant to be visible in the page. Do not add a `redirect` field: Web3Forms says that is for forms without JavaScript.
 - **No database, no backend, no server-side code.**
 
@@ -48,34 +49,7 @@ This is the production website for **Texas AI Automation** (texaskrystal.com), a
 
 ## Design System
 
-### Theme: Dark futuristic with glassmorphism
-
-- **Background:** Deep navy (#040812) with subtle radial gradient mesh and grid overlay
-- **Cards:** Semi-transparent glass cards with blur backdrop, subtle top-edge glow
-- **Accent colors:** Cyan (#00d4ff) primary, Blue (#3b82f6), Purple (#8b5cf6), Emerald (#10b981), Amber (#f59e0b), Rose (#f43f5e)
-- **Gradient:** Hero gradient flows cyan → blue → purple
-- **Typography:** Sora (display/headings), Outfit (body), JetBrains Mono (code/labels)
-- **Border radius:** 8px (small), 16px (medium), 24px (large), 32px (extra-large)
-
-### Key CSS Variables
-
-All theme values are in `:root` at the top of `style.css`. Change these to retheme the entire site:
-
-- `--bg-deep`, `--bg-surface`, `--bg-card`, `--bg-glass` — background layers
-- `--accent-cyan`, `--accent-blue`, `--accent-purple`, etc. — accent colors
-- `--text-primary`, `--text-secondary`, `--text-muted` — text hierarchy
-- `--font-display`, `--font-body`, `--font-mono` — font families
-
-### Component Patterns
-
-- **`.glass-card`** — Main card component with backdrop blur, border glow on hover, top-edge gradient line
-- **`.section-label`** — Monospace uppercase label with left dash (e.g., "What We Automate")
-- **`.section-title`** — Large display heading
-- **`.btn-primary`** — Gradient button (cyan→blue→purple), dark text
-- **`.btn-ghost`** — Transparent button with glowing border
-- **`.nav-cta`** — Pill-shaped CTA in the navbar
-- **`.fade-up`** — Scroll-reveal animation class (add to any element)
-- **`.stagger`** — Parent class that staggers children animation delays
+See `DESIGN.md` for colors, type and component rules. Inline page styles use the CSS variables in `css/style.css`.
 
 ## Deployment
 
@@ -118,14 +92,20 @@ All pages share the same nav structure:
 Home | Solutions | Industries | How It Works | Security | Government | Contact | [Free Audit →]
 ```
 
-The nav becomes glassy/blurred on scroll (`.nav.scrolled` class toggled by JS). Mobile menu is a hamburger with slide-in panel at the 1120px breakpoint, because eight nav items need the width.
+Mobile menu is a hamburger with slide-in panel at the 1120px breakpoint, because eight nav items need the width.
 
 ## Content Guidelines
 
-- **Never claim certifications not yet achieved** — say "aligned with SOC 2 principles" not "SOC 2 certified"
+- **Never claim certifications not yet achieved** — do not mention SOC 2 unless there is a real, documented program, and never imply a SOC 2 report exists
 - **Never imply big brands are customers** unless there's written permission — say "built for operators in fuel/retail" not "trusted by Chevron"
-- **Audio monitoring sections must always mention consent/notice requirements** — signage, employee acknowledgements, compliance with recording laws
-- **Always emphasize local processing** — this is the core differentiator. "Your data never leaves your network."
+- **Conversation analysis sections must explain recording notice, appropriate consent, access restrictions and retention, and say alerts flag potential issues for human review. Never promise emergency detection, automatic theft judgments or guaranteed SMS delivery
+- **Do not say data never leaves the network.** Use: "We agree where information is processed, who can access it, and which external services receive it before deployment." Describe local processing only where supported and configured.
+- **Do not promise compliance or elimination of risk.** Use: "We help configure access, retention and data-sharing controls to support your requirements."
+- **Keep demonstrated features separate from illustrative examples.**
+- **Keep unfinished-product and coming-soon content off the site.**
+- **Business pages use Free Business Audit. The Government page uses Capability Statement and Discuss a Project.**
+- **Do not say the company serves all 25 TxDOT districts unless the owner has verified it.**
+- **NIGP codes must match the CMBL profile.**
 - **No biometric claims** — the system analyzes conversations for events, not voice identity
 
 ## Common Tasks
@@ -140,10 +120,10 @@ The nav becomes glassy/blurred on scroll (`.nav.scrolled` class toggled by JS). 
 Edit CSS variables in `:root` at the top of `css/style.css`. The entire site will update.
 
 ### Add a blog/resources section
-Create a `resources.html` page following the existing page template pattern. Add it to the nav in every HTML file. Use `.glass-card` components for article previews.
+Create a `resources.html` page following the existing page template pattern. Add it to the nav in every HTML file. Use the existing card or list styles.
 
 ### Add images
-Place in an `assets/` or `images/` folder. Keep images optimized (WebP preferred). The current site uses emoji and CSS for visuals — no image files required for the base site.
+Place in an `assets/` or `images/` folder. Keep images optimized (WebP preferred). Do not use emoji as icons.
 
 ## Important Reminders
 

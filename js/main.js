@@ -1,16 +1,8 @@
 /* ========================================
-   TEXAS AI AUTOMATION — Main JavaScript
+   TEXAS KRYSTAL — Main JavaScript
    ======================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-
-  // ── NAV SCROLL EFFECT ──
-  const nav = document.querySelector('.nav');
-  if (nav) {
-    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-  }
 
   // ── MOBILE MENU ──
   const toggle = document.querySelector('.nav-toggle');
@@ -32,25 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
-  // ── SCROLL REVEAL ──
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-  // ── STAGGER INDEX ──
-  document.querySelectorAll('.stagger').forEach(parent => {
-    Array.from(parent.children).forEach((child, i) => {
-      child.style.setProperty('--i', i);
-    });
-  });
 
   // ── CONTACT FORM (Web3Forms) ──
   const form = document.getElementById('contactForm');
@@ -75,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (data.success) {
           btn.textContent = '✓ Message Sent!';
-          btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+          btn.style.background = '#2C6A4A';
           form.reset();
           if (status) status.textContent = "Thanks. We'll respond within 24 hours.";
           setTimeout(() => {
@@ -88,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       } catch (err) {
         btn.textContent = 'Error — Try Again';
-        btn.style.background = 'linear-gradient(135deg, #f43f5e, #e11d48)';
+        btn.style.background = '#A63A24';
         btn.disabled = false;
         if (status) status.textContent = "Your message didn't send. Please try again, call 832-224-5918, or email admin@texaskrystal.com.";
         setTimeout(() => {
@@ -101,23 +74,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── ACTIVE NAV LINK ──
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a').forEach(a => {
+  document.querySelectorAll('.nav-links a:not(.nav-cta)').forEach(a => {
     const href = a.getAttribute('href');
     if (href === currentPage || (currentPage === '' && href === 'index.html')) {
       a.classList.add('active');
     }
   });
-
-  // ── SMOOTH SCROLL FOR ANCHORS ──
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', (e) => {
-      const target = document.querySelector(a.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        const calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        target.scrollIntoView({ behavior: calm ? 'auto' : 'smooth', block: 'start' });
-      }
-    });
-  });
-
 });
