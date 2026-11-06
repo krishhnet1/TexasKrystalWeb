@@ -31,7 +31,7 @@ This is the production website for **Texas AI Automation** (texaskrystal.com), a
 ├── how-it-works.html   # 5-stage pipeline explanation with human-in-the-loop
 ├── security.html       # Security posture, local LLM architecture, compliance frameworks
 ├── contact.html        # Contact form + contact details
-├── privacy.html        # Privacy Policy (required for Google OAuth/Play verification)
+├── privacy.html        # Privacy Policy
 ├── terms.html          # Terms of Service
 ├── admin.html          # Admin contact — security disclosures, abuse reporting, data requests
 ├── government.html     # Government & public sector, links the capability statement PDF
@@ -120,17 +120,6 @@ Home | Solutions | Industries | How It Works | Security | Government | Contact |
 
 The nav becomes glassy/blurred on scroll (`.nav.scrolled` class toggled by JS). Mobile menu is a hamburger with slide-in panel at the 1120px breakpoint, because eight nav items need the width.
 
-## SEO & Google Verification Notes
-
-This site was built partly to satisfy Google's developer verification requirements (OAuth app verification and Google Play Console). Key compliance points:
-
-- **Homepage describes what the company does** (not just a login page)
-- **Privacy Policy linked from homepage footer** — required for OAuth verification
-- **Contact info is real and verifiable** — phone, email, mailing address
-- **Domain must be verified** via Google Search Console
-- **Email must be on the domain** (admin@texaskrystal.com) for organizational verification
-
-## Content Guidelines
 
 - **Never claim certifications not yet achieved** — say "aligned with SOC 2 principles" not "SOC 2 certified"
 - **Never imply big brands are customers** unless there's written permission — say "built for operators in fuel/retail" not "trusted by Chevron"
