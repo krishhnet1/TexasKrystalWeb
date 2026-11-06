@@ -120,6 +120,7 @@ Home | Solutions | Industries | How It Works | Security | Government | Contact |
 
 The nav becomes glassy/blurred on scroll (`.nav.scrolled` class toggled by JS). Mobile menu is a hamburger with slide-in panel at the 1120px breakpoint, because eight nav items need the width.
 
+## Content Guidelines
 
 - **Never claim certifications not yet achieved** — say "aligned with SOC 2 principles" not "SOC 2 certified"
 - **Never imply big brands are customers** unless there's written permission — say "built for operators in fuel/retail" not "trusted by Chevron"
