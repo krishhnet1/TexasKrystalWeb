@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How It Works — Texas Krystal</title>
-  <meta name="description" content="See how our privacy-first AI pipeline captures, processes, classifies, alerts, and reports — all on local infrastructure.">
+  <meta name="description" content="See how our AI pipeline captures, processes, classifies, alerts, and reports, with people reviewing potential issues.">
   <link rel="canonical" href="https://texaskrystal.com/how-it-works.html">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://texaskrystal.com/how-it-works.html">
   <meta property="og:title" content="How It Works — Texas Krystal">
-  <meta property="og:description" content="See how our privacy-first AI pipeline captures, processes, classifies, alerts, and reports — all on local infrastructure.">
+  <meta property="og:description" content="See how our AI pipeline captures, processes, classifies, alerts, and reports, with people reviewing potential issues.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap">
@@ -31,7 +31,7 @@
       <li><a href="security.html">Security</a></li>
       <li><a href="government.html">Government</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="contact.html" class="nav-cta">Free Audit →</a></li>
+      <li><a href="contact.html" class="nav-cta">Free Business Audit →</a></li>
     </ul>
   </div>
 </nav>
@@ -40,7 +40,7 @@
 <div class="page-header">
   <div class="container">
     <h1>From raw data to<br>actionable intelligence</h1>
-    <p>Every automation follows the same five-stage pipeline — running entirely on your local infrastructure with a human-in-the-loop option for high-risk decisions.</p>
+    <p>Every automation follows the same five stages, with human review of potential issues. Examples on this page show what can be configured.</p>
   </div>
 </div>
 
@@ -55,11 +55,11 @@
           <h2 style="font-family:var(--font-display); font-size:1.6rem; font-weight:700;">Capture</h2>
         </div>
         <p style="color:var(--text-secondary); margin-bottom:16px;">
-          Data enters the pipeline from your existing infrastructure — no new hardware required in most cases. Microphones at points of sale capture audio. Scanners or email inboxes receive documents. Staff phones snap inventory photos.
+          Data enters the pipeline from your existing systems or from equipment we agree on. With recording notice and appropriate consent, microphones at points of sale capture audio. Scanners or email inboxes receive documents. Staff phones snap inventory photos.
         </p>
-        <p style="color:var(--text-secondary); margin-top:12px;">Audio monitoring requires posted notice at monitored locations and employee acknowledgements, and must follow applicable recording laws.</p>
+        <p style="color:var(--text-secondary); margin-top:12px;">Conversation analysis requires recording notice and appropriate consent. Access to recordings and transcripts is restricted, retention is set during configuration, and alerts flag potential issues for human review.</p>
         <p style="color:var(--text-secondary);">
-          Inputs are processed on your on-premises server. Alerts, reports and exports you turn on leave through those services, such as SMS, email or accounting software.
+          We agree where information is processed, who can access it, and which external services receive it before deployment.
         </p>
       </div>
       <div class="glass-card">
@@ -86,7 +86,7 @@
           Raw inputs are converted into structured text and data. Audio becomes transcripts with speaker labels. PDFs become extracted fields. Photos become item lists with counts and positions.
         </p>
         <p style="color:var(--text-secondary);">
-          All models run on your local GPU hardware — Mistral, LLaMA, Qwen, or Whisper depending on the task.
+          Models are chosen for the task. Local processing is available where supported and configured.
         </p>
       </div>
       <div class="glass-card" style="order:1;">
@@ -95,7 +95,7 @@
           <div style="padding:12px; background:rgba(31,70,144,0.06); border:1px solid rgba(31,70,144,0.12); border-radius:10px; font-size:0.85rem; color:var(--text-secondary);"><strong style="color:var(--accent-purple-text);">Whisper</strong> — speech-to-text transcription for audio inputs</div>
           <div style="padding:12px; background:rgba(31,70,144,0.06); border:1px solid rgba(31,70,144,0.12); border-radius:10px; font-size:0.85rem; color:var(--text-secondary);"><strong style="color:var(--accent-purple-text);">OCR + IDP</strong> — optical character recognition for documents</div>
           <div style="padding:12px; background:rgba(31,70,144,0.06); border:1px solid rgba(31,70,144,0.12); border-radius:10px; font-size:0.85rem; color:var(--text-secondary);"><strong style="color:var(--accent-purple-text);">YOLO variants</strong> — object detection for inventory photos</div>
-          <div style="padding:12px; background:rgba(31,70,144,0.06); border:1px solid rgba(31,70,144,0.12); border-radius:10px; font-size:0.85rem; color:var(--text-secondary);"><strong style="color:var(--accent-purple-text);">Custom fine-tuned models</strong> — trained on your specific products and jargon</div>
+          <div style="padding:12px; background:rgba(31,70,144,0.06); border:1px solid rgba(31,70,144,0.12); border-radius:10px; font-size:0.85rem; color:var(--text-secondary);"><strong style="color:var(--accent-purple-text);">Your business information</strong> — connect the system to your approved business information, where supported</div>
         </div>
       </div>
     </div>
@@ -108,23 +108,23 @@
           <h2 style="font-family:var(--font-display); font-size:1.6rem; font-weight:700;">Classify &amp; Detect</h2>
         </div>
         <p style="color:var(--text-secondary); margin-bottom:16px;">
-          Local LLMs analyze structured outputs to identify operational events, exceptions, and anomalies. This is where AI intelligence converts raw information into business-relevant signals.
+          AI models analyze structured outputs to flag operational events, exceptions, and anomalies for review.
         </p>
         <p style="color:var(--text-secondary);">
-          The classification engine can be fine-tuned to your business vocabulary, product catalog, and specific rules. A convenience store's "out of Marlboro Reds" triggers a different workflow than a restaurant's "the fryer is making noise."
+          We can connect the system to your approved business information, such as your product catalog and specific rules. A convenience store's "out of Marlboro Reds" triggers a different workflow than a restaurant's "the fryer is making noise."
         </p>
       </div>
       <div class="glass-card">
-        <h3 style="font-size:1rem;font-family:var(--font-display); font-weight:600; margin-bottom:16px;">Event Categories</h3>
+        <h3 style="font-size:1rem;font-family:var(--font-display); font-weight:600; margin-bottom:16px;">Example Event Categories</h3>
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
           <div style="padding:10px 14px; background:rgba(31,70,144,0.06); border:1px solid rgba(31,70,144,0.1); border-radius:8px; font-size:0.82rem; color:var(--text-secondary);">Product requests</div>
           <div style="padding:10px 14px; background:rgba(31,70,144,0.06); border:1px solid rgba(31,70,144,0.1); border-radius:8px; font-size:0.82rem; color:var(--text-secondary);">Complaints</div>
-          <div style="padding:10px 14px; background:rgba(31,70,144,0.06); border:1px solid rgba(31,70,144,0.1); border-radius:8px; font-size:0.82rem; color:var(--text-secondary);">Theft signals</div>
+          <div style="padding:10px 14px; background:rgba(31,70,144,0.06); border:1px solid rgba(31,70,144,0.1); border-radius:8px; font-size:0.82rem; color:var(--text-secondary);">Potential register exceptions</div>
           <div style="padding:10px 14px; background:rgba(31,70,144,0.06); border:1px solid rgba(31,70,144,0.1); border-radius:8px; font-size:0.82rem; color:var(--text-secondary);">Equipment issues</div>
-          <div style="padding:10px 14px; background:rgba(31,70,144,0.06); border:1px solid rgba(31,70,144,0.1); border-radius:8px; font-size:0.82rem; color:var(--text-secondary);">Escalation triggers</div>
+          <div style="padding:10px 14px; background:rgba(31,70,144,0.06); border:1px solid rgba(31,70,144,0.1); border-radius:8px; font-size:0.82rem; color:var(--text-secondary);">Possible escalations</div>
           <div style="padding:10px 14px; background:rgba(31,70,144,0.06); border:1px solid rgba(31,70,144,0.1); border-radius:8px; font-size:0.82rem; color:var(--text-secondary);">Invoice anomalies</div>
           <div style="padding:10px 14px; background:rgba(31,70,144,0.06); border:1px solid rgba(31,70,144,0.1); border-radius:8px; font-size:0.82rem; color:var(--text-secondary);">Stock discrepancies</div>
-          <div style="padding:10px 14px; background:rgba(31,70,144,0.06); border:1px solid rgba(31,70,144,0.1); border-radius:8px; font-size:0.82rem; color:var(--text-secondary);">Safety incidents</div>
+          <div style="padding:10px 14px; background:rgba(31,70,144,0.06); border:1px solid rgba(31,70,144,0.1); border-radius:8px; font-size:0.82rem; color:var(--text-secondary);">Possible safety mentions</div>
         </div>
       </div>
     </div>
@@ -137,26 +137,26 @@
           <h2 style="font-family:var(--font-display); font-size:1.6rem; font-weight:700;">Alert &amp; Trigger</h2>
         </div>
         <p style="color:var(--text-secondary); margin-bottom:16px;">
-          High-priority events trigger instant notifications. A customer asking for the manager? SMS goes out within seconds. A theft signal detected? Alert with context delivered immediately.
+          Events you mark as high priority can send a configured alert, which flags a potential issue for human review. This is not an emergency detection service, and SMS delivery is not guaranteed.
         </p>
         <p style="color:var(--text-secondary);">
           Lower-priority events — product requests, equipment mentions, inventory gaps — are logged and queued for the nightly report. You define what's urgent and what's informational.
         </p>
       </div>
       <div class="glass-card" style="order:1;">
-        <h3 style="font-size:1rem;font-family:var(--font-display); font-weight:600; margin-bottom:16px;">Alert Channels</h3>
+        <h3 style="font-size:1rem;font-family:var(--font-display); font-weight:600; margin-bottom:16px;">Configurable Alert Channels</h3>
         <div style="display:flex; flex-direction:column; gap:12px;">
           <div style="display:flex; align-items:center; gap:12px;">
-            <span style="color:var(--text-secondary); font-size:0.9rem;"><strong style="color:var(--text-primary);">SMS</strong> — instant text to manager or owner</span>
+            <span style="color:var(--text-secondary); font-size:0.9rem;"><strong style="color:var(--text-primary);">SMS</strong> — text to a manager or owner, where configured</span>
           </div>
           <div style="display:flex; align-items:center; gap:12px;">
-            <span style="color:var(--text-secondary); font-size:0.9rem;"><strong style="color:var(--text-primary);">Email</strong> — detailed alert with context and transcript excerpt</span>
+            <span style="color:var(--text-secondary); font-size:0.9rem;"><strong style="color:var(--text-primary);">Email</strong> — alert with context, where configured</span>
           </div>
           <div style="display:flex; align-items:center; gap:12px;">
-            <span style="color:var(--text-secondary); font-size:0.9rem;"><strong style="color:var(--text-primary);">Dashboard</strong> — real-time event feed with filters</span>
+            <span style="color:var(--text-secondary); font-size:0.9rem;"><strong style="color:var(--text-primary);">Dashboard</strong> — event feed with filters, where configured</span>
           </div>
           <div style="display:flex; align-items:center; gap:12px;">
-            <span style="color:var(--text-secondary); font-size:0.9rem;"><strong style="color:var(--text-primary);">Excel/Sheets</strong> — structured data appended automatically</span>
+            <span style="color:var(--text-secondary); font-size:0.9rem;"><strong style="color:var(--text-primary);">Excel/Sheets</strong> — structured data export, where configured</span>
           </div>
         </div>
       </div>
@@ -170,15 +170,15 @@
           <h2 style="font-family:var(--font-display); font-size:1.6rem; font-weight:700;">Nightly Report</h2>
         </div>
         <p style="color:var(--text-secondary); margin-bottom:16px;">
-          Every night, the system compiles a full operational summary — what customers asked for, what complaints were logged, what equipment issues were mentioned, what inventory needs reordering, and any security events.
+          Every night, the system compiles a full operational summary — what customers asked for, what complaints were logged, what equipment issues were mentioned, what inventory needs reordering, and any flagged items for review.
         </p>
         <p style="color:var(--text-secondary);">
           Reports are delivered via email, and structured data is exported to Excel or your preferred system. Over time, trend analysis reveals patterns that individual daily reports miss — seasonal demand shifts, recurring maintenance needs, and staffing optimization opportunities.
         </p>
       </div>
       <div class="glass-card">
-        <h3 style="font-size:1rem;font-family:var(--font-display); font-weight:600; margin-bottom:16px;">Sample Report Sections</h3>
-        <p style="color:var(--text-secondary); margin-bottom:12px;">Illustration only. These are not customer results.</p>
+        <h3 style="font-size:1rem;font-family:var(--font-display); font-weight:600; margin-bottom:16px;">Illustrative Report Example</h3>
+        <p style="color:var(--text-secondary); margin-bottom:12px;">Illustrative example only. These are not customer results.</p>
         <div style="display:flex; flex-direction:column; gap:8px; font-family:var(--font-mono); font-size:0.78rem; color:var(--text-muted); background:#F4F6F8; padding:20px; border-radius:12px; border:1px solid var(--border-glass);">
           <span style="color:var(--accent-cyan);">Daily Operations Summary</span>
           <span>Total customer interactions: 847</span>
@@ -202,9 +202,9 @@
     <div style="max-width:700px; margin:0 auto; text-align:center;">
       <h2 class="section-title">AI recommends.<br>Humans decide.</h2>
       <p style="color:var(--text-secondary); margin-bottom:32px;">
-        For high-risk events — potential theft, security incidents, or ambiguous situations — the system routes to a human review queue rather than taking autonomous action. You always have final say over consequential decisions. The AI handles the volume; you handle the judgment calls.
+        Alerts flag potential issues for human review. The system does not decide that theft or any other wrongdoing occurred, and you make the final call on consequential decisions.
       </p>
-      <a href="contact.html" class="btn btn-primary">See It In Action — Book a Demo</a>
+      <a href="contact.html" class="btn btn-primary">Get a Free Business Audit</a>
     </div>
   </div>
 </section>
@@ -214,9 +214,9 @@
   <div class="container">
     <div class="cta-box">
       <h2>Start with a free pilot</h2>
-      <p>We'll automate one bottleneck at no cost. See how the pipeline works with your actual data — on your infrastructure.</p>
+      <p>We'll automate one bottleneck at no cost. See how the pipeline works with your actual data.</p>
       <div class="cta-actions">
-        <a href="contact.html" class="btn btn-primary">Get Your Free Automation Audit</a>
+        <a href="contact.html" class="btn btn-primary">Get a Free Business Audit</a>
         <a href="tel:8322245918" class="btn btn-ghost">832-224-5918</a>
       </div>
     </div>

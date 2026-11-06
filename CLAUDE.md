@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This is the production website for **Texas Krystal** (texaskrystal.com), a brand of Katy Krystal Group, Inc. It is an AI automation and IT services company based in Fulshear, Texas. The company provides privacy-first AI solutions for businesses of all sizes — from food trucks to multi-site enterprises — focusing on three core pillars: conversation intelligence (audio monitoring & analysis), document/invoice automation, and photo-based inventory counting. All AI processing runs on local infrastructure using open-weight models (Mistral, LLaMA, Qwen, Whisper, YOLO). No client data ever touches public cloud LLMs.
+This is the production website for **Texas Krystal** (texaskrystal.com), a brand of Katy Krystal Group, Inc. It is an AI automation and IT services company based in Fulshear, Texas. The company provides privacy-first AI solutions for businesses of all sizes — from food trucks to multi-site enterprises — focusing on three core pillars: conversation intelligence (audio monitoring & analysis), document/invoice automation, and photo-based inventory counting. Where information is processed is agreed with each client before deployment. Local processing is described only where supported and configured.
 
 ## Business Details
 
@@ -96,10 +96,14 @@ Mobile menu is a hamburger with slide-in panel at the 1120px breakpoint, because
 
 ## Content Guidelines
 
-- **Never claim certifications not yet achieved** — say "aligned with SOC 2 principles" not "SOC 2 certified"
+- **Never claim certifications not yet achieved** — do not mention SOC 2 unless there is a real, documented program, and never imply a SOC 2 report exists
 - **Never imply big brands are customers** unless there's written permission — say "built for operators in fuel/retail" not "trusted by Chevron"
-- **Audio monitoring sections must always mention consent/notice requirements** — signage, employee acknowledgements, compliance with recording laws
-- **Keep local-processing claims scoped to the three AI automation services.** Never apply them to the whole company or to other products.
+- **Conversation analysis sections must explain recording notice, appropriate consent, access restrictions and retention, and say alerts flag potential issues for human review. Never promise emergency detection, automatic theft judgments or guaranteed SMS delivery
+- **Do not say data never leaves the network.** Use: "We agree where information is processed, who can access it, and which external services receive it before deployment." Describe local processing only where supported and configured.
+- **Do not promise compliance or elimination of risk.** Use: "We help configure access, retention and data-sharing controls to support your requirements."
+- **Keep demonstrated features separate from illustrative examples.**
+- **Keep unfinished-product and coming-soon content off the site.**
+- **Business pages use Free Business Audit. The Government page uses Capability Statement and Discuss a Project.**
 - **Do not say the company serves all 25 TxDOT districts unless the owner has verified it.**
 - **NIGP codes must match the CMBL profile.**
 - **No biometric claims** — the system analyzes conversations for events, not voice identity
