@@ -18,7 +18,7 @@ This is the production website for **Texas AI Automation** (texaskrystal.com), a
 - **Pure static site** — HTML, CSS, JavaScript only. No frameworks, no build step, no Node.js.
 - **CSS:** Single stylesheet at `css/style.css`. Uses CSS custom properties (variables) for theming. Fonts loaded from Google Fonts (Sora, Outfit, JetBrains Mono).
 - **JS:** Single script at `js/main.js`. Handles nav scroll effect, mobile menu toggle, scroll-reveal animations (IntersectionObserver), and contact form submission.
-- **Contact form:** Uses [Web3Forms](https://web3forms.com) API. The access key in `contact.html` needs to be replaced with a real key (`ceeb139f-3321-42bc-b7e0-2d47f9c06247` placeholder).
+- **Contact form:** Uses [Web3Forms](https://web3forms.com) API. The real access key is in `contact.html`. It is meant to be visible in the page. Do not add a `redirect` field: Web3Forms says that is for forms without JavaScript.
 - **No database, no backend, no server-side code.**
 
 ## File Structure
@@ -34,6 +34,11 @@ This is the production website for **Texas AI Automation** (texaskrystal.com), a
 ├── privacy.html        # Privacy Policy (required for Google OAuth/Play verification)
 ├── terms.html          # Terms of Service
 ├── admin.html          # Admin contact — security disclosures, abuse reporting, data requests
+├── government.html     # Government & public sector, links the capability statement PDF
+├── 404.html            # Not-found page, root-relative links
+├── robots.txt, sitemap.xml
+├── _config.yml         # Keeps CLAUDE.md off the live site
+├── assets/             # Capability statement PDF
 ├── css/
 │   └── style.css       # All styles — single file, CSS variables for theming
 ├── js/
@@ -101,25 +106,19 @@ Both work by connecting a GitHub repo. Push commits → auto-deploy.
 
 The contact form uses Web3Forms (free, unlimited submissions):
 
-1. Go to https://web3forms.com
-2. Enter the email where you want form submissions sent
-3. You'll receive an access key
-4. In `contact.html`, replace `ceeb139f-3321-42bc-b7e0-2d47f9c06247` with the real key:
-   ```html
-   <input type="hidden" name="access_key" value="YOUR_REAL_KEY_HERE">
-   ```
-5. The form includes honeypot spam protection (`botcheck` field)
-6. JavaScript in `main.js` handles async submission with success/error feedback
+1. The live key is already in `contact.html`. To change the receiving email, get a new key at https://web3forms.com and replace the `access_key` value.
+2. The form includes honeypot spam protection (`botcheck` field)
+3. JavaScript in `main.js` handles async submission with success/error feedback
 
 ## Navigation
 
 All pages share the same nav structure:
 
 ```
-Home | Solutions | Industries | How It Works | Security | Contact | [Free Audit →]
+Home | Solutions | Industries | How It Works | Security | Government | Contact | [Free Audit →]
 ```
 
-The nav becomes glassy/blurred on scroll (`.nav.scrolled` class toggled by JS). Mobile menu is a hamburger with slide-in panel at 900px breakpoint.
+The nav becomes glassy/blurred on scroll (`.nav.scrolled` class toggled by JS). Mobile menu is a hamburger with slide-in panel at the 1120px breakpoint, because eight nav items need the width.
 
 ## SEO & Google Verification Notes
 
@@ -160,6 +159,6 @@ Place in an `assets/` or `images/` folder. Keep images optimized (WebP preferred
 
 - This is a **static site** — no build step needed. Edit HTML/CSS/JS directly.
 - All inter-page links use **relative paths** (e.g., `href="solutions.html"` not absolute URLs).
-- The site is **mobile-responsive** with breakpoints at 900px and 768px.
-- **Web3Forms access key** (`ceeb139f-3321-42bc-b7e0-2d47f9c06247`) must be replaced before the contact form will work.
+- The site is **mobile-responsive** with breakpoints at 1120px (nav), 900px and 768px.
+- This file is kept off the live site by `exclude` in `_config.yml`. GitHub Pages must stay on the Jekyll ("legacy") build for that to work. Do not add `.nojekyll`.
 - The ZIP code for Fulshear, TX is **77441**.

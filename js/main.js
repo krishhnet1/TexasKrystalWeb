@@ -16,15 +16,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.querySelector('.nav-toggle');
   const links = document.querySelector('.nav-links');
   if (toggle && links) {
-    toggle.addEventListener('click', () => {
-      toggle.classList.toggle('open');
-      links.classList.toggle('open');
-    });
+    const setMenu = (open) => {
+      toggle.classList.toggle('open', open);
+      links.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+    };
+    toggle.addEventListener('click', () => setMenu(!links.classList.contains('open')));
     links.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        toggle.classList.remove('open');
-        links.classList.remove('open');
-      });
+      a.addEventListener('click', () => setMenu(false));
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && links.classList.contains('open')) {
+        setMenu(false);
+        toggle.focus();
+      }
     });
   }
 
@@ -54,6 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const btn = form.querySelector('button[type="submit"]');
       const originalText = btn.textContent;
+      const status = document.getElementById('formStatus');
+      if (status) status.textContent = '';
       btn.textContent = 'Sending...';
       btn.disabled = true;
 
@@ -61,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const formData = new FormData(form);
         const resp = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
+          headers: { Accept: 'application/json' },
           body: formData,
         });
         const data = await resp.json();
@@ -69,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
           btn.textContent = '✓ Message Sent!';
           btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
           form.reset();
+          if (status) status.textContent = "Thanks. We'll respond within 24 hours.";
           setTimeout(() => {
             btn.textContent = originalText;
             btn.style.background = '';
@@ -81,6 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.textContent = 'Error — Try Again';
         btn.style.background = 'linear-gradient(135deg, #f43f5e, #e11d48)';
         btn.disabled = false;
+        if (status) status.textContent = "Your message didn't send. Please try again, call 832-224-5918, or email admin@texaskrystal.com.";
         setTimeout(() => {
           btn.textContent = originalText;
           btn.style.background = '';
@@ -104,7 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = document.querySelector(a.getAttribute('href'));
       if (target) {
         e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        target.scrollIntoView({ behavior: calm ? 'auto' : 'smooth', block: 'start' });
       }
     });
   });
